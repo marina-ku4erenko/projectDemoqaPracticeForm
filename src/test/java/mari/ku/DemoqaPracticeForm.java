@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class DemoqaPracticeForm {
 
-    File cat = new File("src/test/file/cat.jpg");
+    File cat = new File("src/test/resources/cat.jpg");
 
     @BeforeAll
     static void beforeAll() {
@@ -44,9 +44,9 @@ public class DemoqaPracticeForm {
 
         // указываем предметы
         $("#subjectsInput").click();
-        $("#subjectsInput").sendKeys("e");
+        $("#subjectsInput").setValue("e");
         $(byText("Economics")).click();
-        $("#subjectsInput").sendKeys("c");
+        $("#subjectsInput").setValue("c");
         $(byText("Civics")).click();
 
         // указываем хобби
