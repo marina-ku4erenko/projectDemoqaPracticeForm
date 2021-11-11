@@ -42,20 +42,20 @@ public class RegistrationsPage {
         return this;
     }
 
-    public RegistrationsPage typeFirstName(String value) {
-        firstNameInput.setValue(value);
+    public RegistrationsPage typeFirstName(String firstName) {
+        firstNameInput.setValue(firstName);
 
         return this;
     }
 
-    public RegistrationsPage typeLastName(String value) {
-        lastNameInput.setValue(value);
+    public RegistrationsPage typeLastName(String lastName) {
+        lastNameInput.setValue(lastName);
 
         return this;
     }
 
-    public RegistrationsPage typeMail(String value) {
-        mailInput.setValue(value);
+    public RegistrationsPage typeMail(String mail) {
+        mailInput.setValue(mail);
 
         return this;
     }
@@ -66,8 +66,8 @@ public class RegistrationsPage {
         return this;
     }
 
-    public RegistrationsPage typePhoneNumber(String value) {
-        phoneNumberInput.setValue(value);
+    public RegistrationsPage typePhoneNumber(String phoneNumber) {
+        phoneNumberInput.setValue(phoneNumber);
 
         return this;
     }
@@ -125,15 +125,15 @@ public class RegistrationsPage {
         return this;
     }
 
-    public RegistrationsPage uploadFile(String value) {
-        File cat = new File(value);
+    public RegistrationsPage uploadFile(String file) {
+        File cat = new File(file);
         fileInput.uploadFile(cat);
 
         return this;
     }
 
-    public RegistrationsPage typeAdress(String value) {
-        adressInput.setValue(value);
+    public RegistrationsPage typeAdress(String adress) {
+        adressInput.setValue(adress);
 
         return this;
     }

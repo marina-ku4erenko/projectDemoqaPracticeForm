@@ -28,7 +28,7 @@ public class DemoqaPracticeFormTests extends TestBase {
         registrationsPage.scrollToSubmit();
 
         // указываем дату рождения
-        registrationsPage.setDate(day, month, year);
+        registrationsPage.setDate(day, month, testData.year);
 
         // указываем предметы
         registrationsPage.
@@ -60,7 +60,7 @@ public class DemoqaPracticeFormTests extends TestBase {
                 checkResultsValue("Student Email", testData.firstName + "." + testData.lastName + "666@mail.ru").
                 checkResultsValue("Gender", "Male").
                 checkResultsValue("Mobile", testData.mobile).
-                checkResultsValue("Date of Birth", day + " " + month + "," + year).
+                checkResultsValue("Date of Birth", day + " " + month + "," + testData.year).
                 checkResultsValue("Subjects", "Economics, Civics").
                 checkResultsValue("Hobbies", "Sports, Reading, Music").
                 checkResultsValue("Picture", imgName).

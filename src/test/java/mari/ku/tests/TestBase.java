@@ -9,6 +9,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "1600x900";
+        Configuration.holdBrowserOpen = true;
     }
 
 }
