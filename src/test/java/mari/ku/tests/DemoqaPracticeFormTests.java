@@ -3,12 +3,9 @@ package mari.ku.tests;
 import mari.ku.pages.RegistrationsPage;
 import org.junit.jupiter.api.Test;
 
-import static mari.ku.tests.TestData.*;
-
-public class DemoqaPracticeFormTests extends TestBase {
+public class DemoqaPracticeFormTests extends TestData {
 
     RegistrationsPage registrationsPage = new RegistrationsPage();
-    TestData testData = new TestData();
 
     @Test
     void allFieldsTestStudentRegistrationForm() {
@@ -18,17 +15,17 @@ public class DemoqaPracticeFormTests extends TestBase {
 
         // заполняем имя, фамилию, почту, пол, номер телефона
         registrationsPage.
-                typeFirstName(testData.firstName).
-                typeLastName(testData.lastName).
-                typeMail(testData.firstName + "." + testData.lastName + "666@mail.ru").
+                typeFirstName(firstName).
+                typeLastName(lastName).
+                typeMail(firstName + "." + lastName + "666@mail.ru").
                 selectGenderMale().
-                typePhoneNumber(testData.mobile);
+                typePhoneNumber(mobile);
 
         // скролл страницы до кнопки submit
         registrationsPage.scrollToSubmit();
 
         // указываем дату рождения
-        registrationsPage.setDate(day, month, testData.year);
+        registrationsPage.setDate(day, month, year);
 
         // указываем предметы
         registrationsPage.
@@ -46,7 +43,7 @@ public class DemoqaPracticeFormTests extends TestBase {
         registrationsPage.uploadFile(imgPath + imgName);
 
         // указываем адрес
-        registrationsPage.typeAdress(testData.address);
+        registrationsPage.typeAdress(address);
 
         // указываем штат и город Karnal
         registrationsPage.selectCityKarnal();
@@ -56,15 +53,15 @@ public class DemoqaPracticeFormTests extends TestBase {
 
         // сверяем данные
         registrationsPage.
-                checkResultsValue("Student Name", testData.firstName + " " + testData.lastName).
-                checkResultsValue("Student Email", testData.firstName + "." + testData.lastName + "666@mail.ru").
+                checkResultsValue("Student Name", firstName + " " + lastName).
+                checkResultsValue("Student Email", firstName + "." + lastName + "666@mail.ru").
                 checkResultsValue("Gender", "Male").
-                checkResultsValue("Mobile", testData.mobile).
-                checkResultsValue("Date of Birth", day + " " + month + "," + testData.year).
+                checkResultsValue("Mobile", mobile).
+                checkResultsValue("Date of Birth", day + " " + month + "," + year).
                 checkResultsValue("Subjects", "Economics, Civics").
                 checkResultsValue("Hobbies", "Sports, Reading, Music").
                 checkResultsValue("Picture", imgName).
-                checkResultsValue("Address", testData.address).
+                checkResultsValue("Address", address).
                 checkResultsValue("Gender", "Male").
                 checkResultsValue("State and City", "Haryana Karnal");
 
