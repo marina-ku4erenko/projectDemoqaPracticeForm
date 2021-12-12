@@ -1,13 +1,10 @@
 package mari.ku.tests;
 
 import io.qameta.allure.*;
-import mari.ku.pages.RegistrationsPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class DemoqaPracticeFormTests extends TestData {
-
-    RegistrationsPage registrationsPage = new RegistrationsPage();
 
     @Owner("marina-ku4erenko")
     @Feature("Регистрация студента")

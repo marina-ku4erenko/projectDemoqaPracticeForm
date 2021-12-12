@@ -4,15 +4,23 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import mari.ku.helpers.Attach;
+import mari.ku.pages.RegistrationsPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import static com.codeborne.selenide.Selenide.open;
+
 
 public class TestBase {
 
+    RegistrationsPage registrationsPage = new RegistrationsPage();
+
     @BeforeAll
     static void beforeAll() {
+
+        open("https://demoqa.com/automation-practice-form");
+
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.browserSize = "1600x900";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
