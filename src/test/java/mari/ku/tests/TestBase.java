@@ -8,11 +8,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import static com.codeborne.selenide.Selenide.open;
+
 public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-
+        open("https://demoqa.com/automation-practice-form");
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.browserSize = "1600x900";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";

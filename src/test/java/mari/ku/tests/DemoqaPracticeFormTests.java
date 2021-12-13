@@ -18,7 +18,7 @@ public class DemoqaPracticeFormTests extends TestData {
     void allFieldsTestStudentRegistrationForm() {
 
         // открываем страницу в браузере с формой регистрации
-        registrationsPage.openPage();
+        //registrationsPage.openPage();
 
         // заполняем имя, фамилию, почту, пол, номер телефона
         registrationsPage.
