@@ -4,7 +4,7 @@ import com.github.javafaker.Faker;
 
 import java.util.Locale;
 
-public class TestData extends TestBase {
+public class TestData {
 
     Faker faker = new Faker(new Locale("ru"));
 

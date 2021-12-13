@@ -4,7 +4,7 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class DemoqaPracticeFormTests extends TestData {
+public class DemoqaPracticeFormTests extends TestBase {
 
     @Owner("marina-ku4erenko")
     @Feature("Регистрация студента")
