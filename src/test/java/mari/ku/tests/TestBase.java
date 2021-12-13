@@ -29,7 +29,7 @@ public class TestBase extends TestData {
 
     @AfterEach
     public void tearDown() {
-        Attach.screenshotAs("Last screenshot");
+        Attach.screenshotAs("Screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();

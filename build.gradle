@@ -23,9 +23,9 @@ tasks.withType(JavaCompile) {
 
 dependencies {
     testImplementation "org.junit.jupiter:junit-jupiter:5.8.1"
-    testImplementation 'com.codeborne:selenide:5.25.0-selenium-4.0.0'
+    testImplementation 'com.codeborne:selenide:5.24.0'
     testImplementation 'com.github.javafaker:javafaker:0.12'
-    testImplementation 'io.qameta.allure:allure-selenide:2.16.1'
+    testImplementation 'io.qameta.allure:allure-selenide:2.16.0'
     testImplementation 'org.aspectj:aspectjweaver:1.9.6'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.29'

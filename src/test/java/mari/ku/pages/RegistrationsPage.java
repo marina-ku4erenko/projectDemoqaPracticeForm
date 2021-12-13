@@ -152,7 +152,6 @@ public class RegistrationsPage {
     public RegistrationsPage uploadFile(String file) {
         File cat = new File(file);
         fileInput.uploadFile(cat);
-        //fileInput.uploadFromClasspath(String.valueOf(cat));
 
         return this;
     }
