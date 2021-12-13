@@ -44,6 +44,7 @@ public class DemoqaPracticeFormTests extends TestBase {
                 selectHobbyMusic();
 
         // загружаем картинку
+        //registrationsPage.uploadFile(imgPath + imgName);
         registrationsPage.uploadFile(imgPath + imgName);
 
         // указываем адрес
