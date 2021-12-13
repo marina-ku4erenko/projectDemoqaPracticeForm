@@ -74,7 +74,7 @@ public class DemoqaPracticeFormTests extends TestData {
 
     }
 
- /*   @Owner("marina-ku4erenko")
+    @Owner("marina-ku4erenko")
     @Feature("Регистрация студента")
     @Story("Регистрация с заполнением только обязательных полей")
     @Severity(SeverityLevel.NORMAL)
@@ -104,7 +104,7 @@ public class DemoqaPracticeFormTests extends TestData {
                 checkResultsValue("Gender", "Female").
                 checkResultsValue("Mobile", mobile);
 
-    }*/
+    }
 
 
 }
