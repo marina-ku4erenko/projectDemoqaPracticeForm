@@ -2,11 +2,10 @@ package mari.ku.tests;
 
 import com.github.javafaker.Faker;
 
-import java.util.Locale;
+public class TestData extends TestBase {
 
-public class TestData extends  TestBase {
-
-    Faker faker = new Faker(new Locale("ru"));
+    //Faker faker = new Faker(new Locale("ru"));
+    Faker faker = new Faker();
 
     String firstName = faker.name().firstName();
     String lastName = faker.name().lastName();
