@@ -24,7 +24,7 @@ public class DemoqaPracticeFormTests extends TestData {
         registrationsPage.
                 typeFirstName(firstName).
                 typeLastName(lastName).
-                typeMail(firstName + "." + lastName + "666@mail.ru").
+                typeMail(mail).
                 selectGenderMale().
                 typePhoneNumber(mobile);
 
@@ -61,7 +61,7 @@ public class DemoqaPracticeFormTests extends TestData {
         // сверяем данные
         registrationsPage.
                 checkResultsValue("Student Name", firstName + " " + lastName).
-                checkResultsValue("Student Email", firstName + "." + lastName + "666@mail.ru").
+                checkResultsValue("Student Email", mail).
                 checkResultsValue("Gender", "Male").
                 checkResultsValue("Mobile", mobile).
                 checkResultsValue("Date of Birth", day + " " + month + "," + year).
