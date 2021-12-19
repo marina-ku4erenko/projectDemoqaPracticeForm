@@ -27,17 +27,25 @@ dependencies {
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'io.qameta.allure:allure-selenide:2.16.0'
     testImplementation 'org.aspectj:aspectjweaver:1.9.6'
+    testImplementation 'org.aeonbits.owner:owner:1.0.12'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.29'
 
 }
 
-test {
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform()
     testLogging {
         lifecycle {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
+    }
+}
+
+task registration_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags "registration"
     }
 }
