@@ -43,6 +43,16 @@ tasks.withType(Test) {
             exceptionFormat "short"
         }
     }
+}
 
+task test_RegRequiredFields(type: Test) {
+    useJUnitPlatform {
+        includeTags "regRequiredFields"
+    }
+}
 
+task test_RegAllFields(type: Test) {
+    useJUnitPlatform {
+        includeTags "regAllFields"
+    }
 }

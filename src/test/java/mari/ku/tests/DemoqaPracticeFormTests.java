@@ -10,7 +10,7 @@ public class DemoqaPracticeFormTests extends TestData {
 
     RegistrationsPage registrationsPage = new RegistrationsPage();
 
-    @Tag("registrationAllFields")
+    @Tag("regAllFields")
     @Owner("marina-ku4erenko")
     @Feature("Регистрация студента")
     @Story("Регистрация с заполнением всех полей")
@@ -76,7 +76,7 @@ public class DemoqaPracticeFormTests extends TestData {
 
     }
 
-    @Tag("registrationRequiredFields")
+    @Tag("regRequiredFields")
     @Owner("marina-ku4erenko")
     @Feature("Регистрация студента")
     @Story("Регистрация с заполнением только обязательных полей")
