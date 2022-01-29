@@ -16,28 +16,15 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
 
-
-        /*
-                String browser = System.getProperty("browser");
-        String version = System.getProperty("version");
-        String size = System.getProperty("size");
-        String remoteUrl = System.getProperty("remoteUrl", "selenoid.autotests.cloud/wd/hub");
-        String login = System.getProperty("login");
-        String pass = System.getProperty("pass");
-        * */
-
-
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        Configuration.browserSize = "1600x900";
-        // Configuration.browserSize = System.getProperty("browserSize", "1600x900");
-        //Configuration.browser = System.getProperty("browser", "chrome");
-        // Configuration.browserVersion = System.getProperty("browserVersion", "91");
+
+        System.getProperty("browser", "chrome");
+        System.getProperty("browserVersion", "91");
+        System.getProperty("browserSize", "1600x900");
 
         String remoteUrl = System.getProperty("remoteUrl");
         String user = System.getProperty("user");
         String password = System.getProperty("password");
-
-        // Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
         Configuration.remote = "https://" + user + ":" + password + "@" + remoteUrl;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
