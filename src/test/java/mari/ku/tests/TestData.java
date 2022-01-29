@@ -18,6 +18,6 @@ public class TestData extends TestBase {
     public static String day = "17";
     public static String month = "May";
     public static String imgPath = "src/test/resources/img/";
-    public static String imgName = "dog.png";
+    public static String imgName = "cat.jpg";
 
 }
