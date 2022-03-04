@@ -3,12 +3,15 @@ package mari.ku.tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import mari.ku.config.CredentialsConfig;
 import mari.ku.helpers.Attach;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static java.lang.String.format;
 
 public class TestBase {
 
@@ -16,16 +19,16 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
 
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
+        Configuration.remote = format("https://%s:%s@%s",
+                credentials.login(),
+                credentials.password(),
+                System.getProperty("remoteUrl", "selenoid.autotests.cloud/wd/hub"));
 
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "91");
         Configuration.browserSize = System.getProperty("browserSize", "1280x1024");
-
-        String remoteUrl = System.getProperty("remoteUrl");
-        String user = System.getProperty("user");
-        String password = System.getProperty("password");
-        Configuration.remote = "https://" + user + ":" + password + "@" + remoteUrl;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
